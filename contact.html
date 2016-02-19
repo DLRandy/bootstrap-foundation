@@ -1,1 +1,86 @@
-contact.html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Foundations</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="static/js/jquery.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-top: 30px;">
+<div class="container">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button data-toggle="collapse" data-target="#theMenu" class="collapsed navbar-toggle" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand brand" href="./index.html">Zz's Store</a>
+			</div>
+			<div class="collapse navbar-collapse" id="theMenu">
+				<ul class="nav navbar-nav">
+					<li><a href="./index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+					<li><a href="./browse.html"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Browse Products</a></li>
+					<li class="active"><a href="./contact.html"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact Us</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In</a></li>
+				</ul>
+				<form class="navbar-form navbar-right visible-md-inline visible-lg-inline">
+					<div class="form-group">
+						<label for="keyword" class="sr-only">keyword</label>
+						<input placeholder="Enter Search keyword" id="keyword" class="form-control input-sm" type="text"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<div class="page-header">
+		<h1><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;We would like to hear from you@@</h1>
+	</div>
+	<div class="well well-sm">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="yourName" class="col-sm-3 control-label">Name</label>
+			<div class="col-sm-9">
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+					<input id="yourName" placeholder="Your Name" type="text" class="form-control"></input>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="yourEmail" class="col-sm-3 control-label">Email</label>
+			<div class="col-sm-9">
+				<div class="input-group">
+					<span class="input-group-addon">@</span>
+					<input id="yourEmail" placeholder="Your Email" type="text" class="form-control"></input>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="yourComments" class="col-sm-3 control-label">Tell Us</label>
+			<div class="col-sm-9">
+				<div class="input-group">
+					<span class="input-group-addon "><span class="glyphicon glyphicon-comment"></span></span>
+					<textarea rows="3" placeholder="Your Comments" id="yourComments" class="form-control"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3">
+			<div class="checkbox">
+				<label><input type="checkbox">Subscribe Me!!</input></label>
+			</div>
+		</div>
+		<div class="cleatrfix">&nbsp;</div>
+		<div class="col-sm-12 text-center">
+			<button class="btn btn-primary btn-lg" type="submit"><span class="glyphicon glyphicon-envelop"></span>&nbsp;Post It</button>
+		</div>
+	</form>
+	</div>
+</div>
+</body>
+</html>

@@ -6,4 +6,6 @@ gulp.task('default', function () {
 	gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css',
 		'bower_components/bootstrap/dist/css/bootstrap-theme.min.css'])
 	.pipe(gulp.dest('static/css'));
+	gulp.src('bower_components/bootstrap/dist/fonts/*')
+	.pipe(gulp.dest('static/fonts'));
 });
