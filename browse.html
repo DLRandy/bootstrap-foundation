@@ -5,10 +5,302 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1" >
 	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap-treeview.min.css">
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap-treeview.min.js"></script>
 </head>
-<body>
+<body style="padding-top: 30px;">
+ <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse" data-target="#theMenu" class="collapsed navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand brand" href="./index.html">Zz's Store</a>
+			</div>
+			<div id="theMenu" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="./index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+					<li class="active"><a href="./browse.html"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Browse Products</a></li>
+					<li ><a href="./contact.html"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Contact Us</a></li>
+					<li><a href="./404.html"><span class="glyphicon glyphicon-off"></span>&nbsp;404</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Welcome back<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;My Cart<span class="badge">4</span></a>
+							</li>	
+							<li class="divider"></li>
+							<li><a href="#"><span class="glyphicon glyphicon-picture"></span>&nbsp;My Profile</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-gift"></span>&nbsp;Order History</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Notifications</a></li>							
+						</ul>
+					</li>
+					<li><a href="#" id="logonLink"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In</a></li>
+				</ul>
+				<form class="navbar-form navbar-right visible-md-inline visible-lg-inline">
+					<div class="form-group">
+						<label for="keyword" class="sr-only">keyword</label>
+						<input id="keyword" class="form-control input-sm" placeholder="Enter Search keyword" type="text"></input>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</nav>
+	<div class="page-header">
+		<h1><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Browser Products and Categories</h1>
+	</div>
+	<div id="msg"></div>	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div id="categoryList"></div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+			<div class="panel panel-danger">
+				<div class="panel-heading" id="productHead">
+					Fashion shop for Him
+				</div>
+				<div class="panel-body">
+					<div class="row"><!-- 这里不加rowclasspopover不显示-->
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img id="prod1" src="static/img/p1.png" class="img-responsive img-thumbnail" title="Product 1" data-toggle="popover" data-placement="right" data-content="details of Product 1"></dt>
+								<dd>Product1</dd>
+							</dl>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img id="prod2" src="static/img/p2.png" class="img-responsive img-thumbnail" title="Product1" ></dt>
+								<dd>Product</dd>
+							</dl>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img id="prod3" src="static/img/p1.png" class="img-responsive img-thumbnail" title="Product1" data-toggle="popover" data-placement="right" data-content="details of Product 1"></dt>
+								<dd>Product</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img src="static/img/p2.png" class="img-responsive img-thumbnail" title="Product2" data-toggle="popover" data-placement="right" data-content="details of Product 2"></dt>
+								<dd>Product 2</dd>
+							</dl>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img src="static/img/p2.png" class="img-responsive img-thumbnail" title="Product 2" data-toggle="popover" data-placement="right" data-content="details of Product 2"></dt>
+								<dd>Product 2</dd>
+							</dl>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<dl>
+								<dt><img src="static/img/p2.png" class="img-responsive img-thumbnail" title="Product 2" data-toggle="popover" data-placement="right" data-content="details of Product 2"></dt>
+								<dd>Product 2</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="btn btn-info btn-sm" data-toggle="dropdown" title="Open items in this shop...">See all&nbsp;<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">see next 10 items</a></li>
+							<li><a href="#">see next 20 items</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Open all items</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="visible-lg-block">
+		<div class="col-md-12 col-lg-12">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					You recently visited
+				</div>
+				<div class="panel-body">
+					<div class="alert alert-info">
+						You last visited yesterday.Please<a href="./contact.html" class="alert-link">Let us know </a>in case of any issues.
+					</div>
+					<ul class="list-inline">
+						<li><img src="static/img/p1.png" class="img-thumbnail" alt="Product 1" title="Product 1"></li>
+						<li><img src="static/img/p2.png" class="img-thumbnail" alt="Product 2" title="Product 2"></li>
+						<li><img src="static/img/p3.png" class="img-thumbnail" alt="Product 3" title="Product 3"></li
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<address>
+					<strong>Zz's Store</strong><br>
+					gan jing zi area<br>
+					Liao ning provice dalian city<br>
+					<abbr title="phone">P:</abbr>11011010<br><a href="mailto:1208484996@qq.com">Zhazha's Email</a>
+				</address>
+			</div>
+		</div>
+		<div class="pull-left">
+			<a href="#" target="_blank">Bootstrap&reg;Demo</a>
+		</div>
+		<div class="pull-right">
+			<a href="#">MIT</a>2016
+		</div>
+	</div>
+</footer>
+<div class="modal fade" id="logonBox" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+				<h4 class="modal-title">Sign In</h4>
+			</div>
+			<div class="modal-body">
+				<div>
+					<ul class="nav nav-pills">
+						<li class="active"><a href="#signin" data-toggle="tab" data-caption="Sign In">Sign In</a></li>
+						<li><a data-toggle="tab" data-caption="Sign Up" href="#signup">Sign Up</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="signin">
+							<form style="padding-top: 5px;">
+								<div class="form-group">
+									<input type="text" class="form-control" id="username" placeholder="Name"></input>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="password" placeholder="Password"></input>
+								</div>
+								<button id="doLogon" type="button" class="btn btn-success btn-block">Sign In</button>
+							</form>
+						</div>
+						<div class="tab-pane" id="signup">
+							<form style="padding-top: 5px;">
+							<div class="form-group">
+								<input type="text" class="form-control" id="yourName" placeholder="Your Full Name"></input>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="yourAlias" placeholder="Alias"></input>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="yourEmail" placeholder="Email"></input>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="yourPassword" placeholder="password"></input>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="confirmPassword" placeholder="password"></input>
+							</div>
+							<button type="button" id="doLogon" class="btn btn-success btn-block">Sign Up</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button data-dismiss="modal" class="btn btn-warning" type="button">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+			function addToCart() {
+				var txt = '<div id="alertdiv" class="alert alert-warning alert-dismissable"><button class="close" data-dismiss="alert">&times;</button><h4>Apologies</h4>This product sell out </div>';
+				$('#msg').html(txt);
+				$('#prod2').popover('hide');
+			}
+		$(document).ready(function () {
+	
+		$('[data-toggle="popover"]').popover();
+		console.log('done');
+		$('#prod2').popover({
+			html: true,
+			placement: 'left',
+			trigger: 'click',
+			container: 'body',
+			content: function () {
+					return '<div class="row"><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="static/img/p2.png" class="img-responsive img-thumbnail" alt="Product 2" title="Product 2"><br/>&nbsp;<br/><button type="button" class="btn btn-xs btn-success" onclick="addToCart()">Add to cart</button><br/><button type="button" class="btn btn-xs btn-info">See full details</button></div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">very good stuff!!</div></div>';
+					
+			}
+		});
+		
+		$('#logonLink').on('click', function () {
+		$('#logonBox').modal({
+			keyboard: false,
+			backdrop: 'static'
+		});
+	});
+	$('#doLogon').on('click', function () {
+		alert("sign in success!!");
+		$('#logonBox').modal('hide');
+	});
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var data = $(e.target).data('caption');
+		var modal = $('#logonBox');
+		modal.find('.modal-title').text(data);
+	});
+	var categories = [
+		{
+			text: "Fashion and Clothing for him",
+			icon: "glyphicon glyphicon-user",
+			state: {
+				expanded: true,
+				selected: true
+			},
+			nodes: [
+				{
+					text: "Shirts"
+				},
+				{
+					text: "Tees"
+				},
+				{
+					text: "Trousers"
+				}
+			]
+		},
+		{
+			text: "Fashion and Clothing for Her",
+			icon: "glyphicon glyphicon-heart",
+			state: {
+				expanded: false,
+				selected: false
+			},
+			nodes: [
+				{
+					text: "Shirts",
+				},
+				{
+					text: "Tees"
+				},
+				{
+					text: "Skirts"
+				}
+			]
+		}
+	];
 
+	$('#categoryList').treeview({
+		data: categories,
+		onNodeSelected: function (event, data) {
+			$('#productHead').text(data.text);
+			console.dir(data);
+		}
+	});
+
+	});
+	
+</script>
 </body>
 </html>
